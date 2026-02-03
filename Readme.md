@@ -70,6 +70,12 @@ The project was developed iteratively using various AI agents under the supervis
 *   **Antigravity**: Used as a coding assistant to implement backend logic, refactor the codebase into a modular `src/` structure, and integrate the API layers.
 *   **Lead Developer**: Reviewed all code, managed architectural decisions, and directed the integration process to ensure technical standards were met.
 
+## 🎬 Demo Video
+
+[Watch the product walkthrough on Loom](https://www.loom.com/share/28809a48a5a943a592bc9aae3cbfff36)
+
+*Note: This walkthrough was captured using the Antigravity autonomous browser-access feature, where an AI agent navigated the live application while the session was recorded.*
+
 ## 📸 Screenshots
 
 ### Dashboard
