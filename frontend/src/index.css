@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Premium Dark Mode Aesthetic */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --brand-primary: #3b82f6;
+  --brand-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-200;
+  }
+  .card {
+     @apply bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-slate-600 transition-colors;
+  }
+}

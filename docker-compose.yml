@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_REGION=us-east-1
+      - DYNAMODB_TABLE=NeuronIncidents
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ~/.aws:/root/.aws:ro  # Mount host AWS creds
+    platform: linux/amd64
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    platform: linux/amd64
