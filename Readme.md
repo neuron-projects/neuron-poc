@@ -103,9 +103,14 @@ The project was developed iteratively using various AI agents under the supervis
 
 ## 📸 Screenshots
 
-| Dashboard | Incident Detail | New Incident |
-| :---: | :---: | :---: |
-| ![Dashboard](file:///Users/avi/Desktop/neuron-poc/docs/dashboard_placeholder.png) | ![Details](file:///Users/avi/Desktop/neuron-poc/docs/detail_placeholder.png) | ![Report](file:///Users/avi/Desktop/neuron-poc/docs/new_placeholder.png) |
+### Dashboard
+![Dashboard](docs/assets/Dashboard.png)
+
+### Incident Detail
+![Details](docs/assets/IncidentPage.png)
+
+### New Incident
+![Report](docs/assets/NewIncident.png)
 
 ## 🔌 API Endpoints
 
