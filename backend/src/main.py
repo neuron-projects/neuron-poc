@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from src.controller.incident import router as incident_router
 
 app = FastAPI(title="Neuron API", version="0.1.0")
 
@@ -12,14 +13,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(incident_router, prefix="/api/incidents", tags=["incidents"])
 
-from app.api.endpoints import router as api_router
-
-app.include_router(api_router, prefix="/api/v1/incidents", tags=["incidents"])
 
 @app.get("/")
 def read_root():
     return {"message": "Neuron API is running"}
+
 
 @app.get("/health")
 def health_check():
