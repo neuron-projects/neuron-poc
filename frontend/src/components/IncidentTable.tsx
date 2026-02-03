@@ -80,15 +80,15 @@ export function IncidentTable({ incidents, isLoading }: IncidentTableProps) {
         <TableBody>
           {incidents.map((incident) => (
             <TableRow
-              key={incident.incidentId}
+              key={incident.id}
               className="table-row-hover"
-              onClick={() => navigate(`/incident/${incident.incidentId}`)}
+              onClick={() => navigate(`/incident/${incident.id}`)}
             >
               <TableCell>
                 <SeverityBadge severity={incident.aiSeverity} size="sm" />
               </TableCell>
               <TableCell className="font-mono text-sm font-medium">
-                {incident.incidentId}
+                {incident.id.substring(0, 8)}...
               </TableCell>
               <TableCell className="max-w-[300px] truncate font-medium">
                 {incident.title}

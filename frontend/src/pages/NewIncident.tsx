@@ -54,9 +54,9 @@ export default function NewIncident() {
       .then((incident) => {
         toast({
           title: 'Incident Created',
-          description: `Incident ${incident.incidentId} has been created successfully.`,
+          description: `Incident ${incident.id} has been created successfully.`,
         });
-        navigate(`/incident/${incident.incidentId}`);
+        navigate(`/incident/${incident.id}`);
       })
       .catch(() => {
         toast({

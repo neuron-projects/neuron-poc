@@ -2,7 +2,7 @@ import { Incident } from '@/types/incident';
 
 export const mockIncidents: Incident[] = [
   {
-    incidentId: 'INC-001',
+    id: 'INC-001',
     title: 'Invoice stuck in approval workflow',
     description: 'Invoice INV-12345 for $50,000 is stuck in the approval workflow. The invoice has been pending for 3 days and the vendor is requesting payment. The approval hierarchy shows the invoice requires CFO approval but the CFO account appears to be locked.',
     module: 'AP',
@@ -14,7 +14,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P1',
     aiSeverityReason: 'Production environment + blocking business process + financial impact over $10K',
     aiCategory: 'Configuration Issue',
-    aiConfidence: 0.92,
+    aiConfidence: 92,
     aiSuggestions: [
       'Check approval hierarchy setup in AP module',
       'Verify CFO account status and unlock if necessary',
@@ -23,7 +23,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-002',
+    id: 'INC-002',
     title: 'Payroll calculation discrepancy',
     description: 'Several employees in the APAC region are reporting incorrect overtime calculations in their January payroll. The issue affects approximately 50 employees.',
     module: 'Payroll',
@@ -35,7 +35,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P1',
     aiSeverityReason: 'Production environment + affects employee compensation + regulatory compliance risk',
     aiCategory: 'Calculation Error',
-    aiConfidence: 0.88,
+    aiConfidence: 88,
     aiSuggestions: [
       'Review overtime rate configuration for APAC region',
       'Check recent configuration changes to payroll rules',
@@ -44,7 +44,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-003',
+    id: 'INC-003',
     title: 'Inventory sync failure with warehouse system',
     description: 'The nightly inventory synchronization between the ERP and warehouse management system failed. Stock levels are not reflecting actual warehouse counts.',
     module: 'Inventory',
@@ -56,7 +56,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P2',
     aiSeverityReason: 'Production environment + data integrity issue + no immediate financial blocking',
     aiCategory: 'Integration Failure',
-    aiConfidence: 0.85,
+    aiConfidence: 85,
     aiSuggestions: [
       'Check integration logs for error details',
       'Verify WMS API connectivity and credentials',
@@ -65,7 +65,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-004',
+    id: 'INC-004',
     title: 'GL posting errors in test environment',
     description: 'Test environment is showing errors when posting journal entries to the general ledger. Error message indicates dimension validation failure.',
     module: 'GL',
@@ -77,7 +77,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P3',
     aiSeverityReason: 'Test environment + no production impact + standard configuration testing',
     aiCategory: 'Configuration Issue',
-    aiConfidence: 0.95,
+    aiConfidence: 95,
     aiSuggestions: [
       'Verify dimension setup matches production',
       'Check required dimension rules on GL accounts',
@@ -86,7 +86,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-005',
+    id: 'INC-005',
     title: 'AR aging report not generating',
     description: 'The weekly AR aging report scheduled job is failing. Finance team needs this report for credit review meetings.',
     module: 'AR',
@@ -98,7 +98,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P2',
     aiSeverityReason: 'Production environment + reporting delay + workaround available via manual export',
     aiCategory: 'Batch Job Failure',
-    aiConfidence: 0.90,
+    aiConfidence: 90,
     aiSuggestions: [
       'Check batch job execution logs',
       'Verify report server connectivity',
@@ -107,7 +107,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-006',
+    id: 'INC-006',
     title: 'New hire onboarding workflow incomplete',
     description: 'HR onboarding workflow for new employees is not triggering position assignment step. Affecting 5 new hires this week.',
     module: 'HR',
@@ -119,7 +119,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P2',
     aiSeverityReason: 'Production environment + HR process delay + limited employee impact',
     aiCategory: 'Workflow Configuration',
-    aiConfidence: 0.87,
+    aiConfidence: 87,
     aiSuggestions: [
       'Review workflow step conditions',
       'Check position management integration',
@@ -128,7 +128,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-007',
+    id: 'INC-007',
     title: 'Vendor payment batch rejected by bank',
     description: 'Weekly payment batch of 150 vendor payments totaling $2.3M was rejected by the bank. Error indicates invalid account format.',
     module: 'AP',
@@ -140,7 +140,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P1',
     aiSeverityReason: 'Production environment + high financial value + vendor relationship impact',
     aiCategory: 'Payment Processing',
-    aiConfidence: 0.94,
+    aiConfidence: 94,
     aiSuggestions: [
       'Review bank file format specifications',
       'Check vendor bank account data quality',
@@ -149,7 +149,7 @@ export const mockIncidents: Incident[] = [
     ]
   },
   {
-    incidentId: 'INC-008',
+    id: 'INC-008',
     title: 'Inventory valuation report discrepancy',
     description: 'Monthly inventory valuation report shows $50K variance compared to GL balance. Need reconciliation before month-end close.',
     module: 'Inventory',
@@ -161,7 +161,7 @@ export const mockIncidents: Incident[] = [
     aiSeverity: 'P2',
     aiSeverityReason: 'Production environment + financial reporting impact + month-end deadline',
     aiCategory: 'Data Reconciliation',
-    aiConfidence: 0.82,
+    aiConfidence: 82,
     aiSuggestions: [
       'Run inventory to GL reconciliation report',
       'Check for pending inventory transactions',

@@ -43,7 +43,7 @@ export default function Dashboard() {
     return incidents.filter((incident) => {
       const matchesSearch =
         searchQuery === '' ||
-        incident.incidentId.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        incident.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
         incident.title.toLowerCase().includes(searchQuery.toLowerCase());
 
       const matchesSeverity = severityFilter === 'all' || incident.aiSeverity === severityFilter;

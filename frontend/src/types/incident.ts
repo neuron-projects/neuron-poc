@@ -4,7 +4,7 @@ export type ERPModule = 'AP' | 'AR' | 'GL' | 'Inventory' | 'HR' | 'Payroll';
 export type Environment = 'Production' | 'Test';
 
 export interface Incident {
-  incidentId: string;
+  id: string;
   title: string;
   description: string;
   module: ERPModule;

@@ -130,7 +130,7 @@ export default function IncidentDetail() {
           </Button>
           <div>
             <div className="flex flex-wrap items-center gap-3">
-              <h1 className="text-2xl font-bold">{incident.incidentId}</h1>
+              <h1 className="text-2xl font-bold">{incident.id}</h1>
               <SeverityBadge severity={incident.aiSeverity} />
               <StatusBadge status={incident.status} />
             </div>
@@ -264,7 +264,7 @@ export default function IncidentDetail() {
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium text-muted-foreground">Category</p>
                   <span className="text-sm font-medium">
-                    {Math.round(incident.aiConfidence * 100)}% confidence
+                    {Math.round(incident.aiConfidence)}% confidence
                   </span>
                 </div>
                 <div className="mt-2 flex items-center gap-2">
