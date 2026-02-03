@@ -6,38 +6,7 @@ This project was built for the **NeuronERP** take-home assessment.
 
 ## 🚀 Architecture
 
-```mermaid
-graph TD
-    classDef frontend fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff
-    classDef backend fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff
-    classDef external fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:#fff
-    classDef user fill:#6366f1,stroke:#4338ca,stroke-width:2px,color:#fff
-
-    User((ERP User)):::user
-
-    subgraph "Frontend (React + Vite)"
-        UI[Lovable UI Components]:::frontend
-        Store[Local State]:::frontend
-    end
-    
-    subgraph "Backend (FastAPI)"
-        API[Incident Controller]:::backend
-        Triage[AI Triage Service]:::backend
-        DBService[DynamoDB Client]:::backend
-    end
-    
-    subgraph "Services"
-        AzureOpenAI[Azure OpenAI - GPT-4o]:::external
-        DynamoDB[(AWS DynamoDB)]:::external
-    end
-
-    User --> UI
-    UI --> API
-    API --> Triage
-    Triage --> AzureOpenAI
-    API --> DBService
-    DBService --> DynamoDB
-```
+![High Level Architecture](docs/assets/Architecture.png)
 
 ## 📊 Data Flow
 
