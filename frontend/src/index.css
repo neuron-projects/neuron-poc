@@ -1,28 +1,162 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Premium Dark Mode Aesthetic */
-:root {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --brand-primary: #3b82f6;
-  --brand-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 96%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 210 72% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 72% 46%;
+
+    --radius: 0.5rem;
+
+    /* Severity Colors */
+    --severity-p1: 4 90% 58%;
+    --severity-p2: 36 100% 50%;
+    --severity-p3: 122 39% 49%;
+
+    /* Status Colors */
+    --status-open: 210 72% 46%;
+    --status-in-progress: 36 100% 50%;
+    --status-resolved: 122 39% 49%;
+    --status-closed: 220 9% 46%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 13% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 13% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 13% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 72% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 13% 20%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 220 13% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 210 72% 56%;
+
+    --sidebar-background: 220 13% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 210 72% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 210 72% 56%;
+  }
 }
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-200;
+  .severity-badge-p1 {
+    @apply bg-severity-p1 text-white font-semibold px-2.5 py-0.5 rounded-full text-xs uppercase tracking-wide;
   }
-  .card {
-     @apply bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-slate-600 transition-colors;
+
+  .severity-badge-p2 {
+    @apply bg-severity-p2 text-white font-semibold px-2.5 py-0.5 rounded-full text-xs uppercase tracking-wide;
+  }
+
+  .severity-badge-p3 {
+    @apply bg-severity-p3 text-white font-semibold px-2.5 py-0.5 rounded-full text-xs uppercase tracking-wide;
+  }
+
+  .status-badge {
+    @apply font-medium px-2.5 py-1 rounded-md text-xs uppercase tracking-wide;
+  }
+
+  .status-open {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .status-in-progress {
+    @apply bg-severity-p2/10 text-severity-p2;
+  }
+
+  .status-resolved {
+    @apply bg-severity-p3/10 text-severity-p3;
+  }
+
+  .status-closed {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-lg border shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .stats-card {
+    @apply bg-card rounded-lg border p-6 transition-all duration-200 hover:shadow-md;
+  }
+
+  .table-row-hover {
+    @apply hover:bg-muted/50 transition-colors duration-150 cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
