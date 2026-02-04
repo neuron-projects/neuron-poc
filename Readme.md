@@ -8,6 +8,10 @@ This project was built for the **NeuronERP** take-home assessment.
 
 - [Problem Statement](docs/ProblemStatement.md): Detailed background and requirements for the project.
 - [Product Design](docs/ProductDesign.md): UI mockups, user journeys, and feature breakdown.
+- [Implementation Plan (v2)](docs/WhatNext.md): HLD and roadmap for Phase 2: Conversational Intake & AI Agents.
+
+> [!TIP]
+> **Looking for the future roadmap?** Check out the [Implementation Plan](docs/WhatNext.md) for the architecture plan of Phase 2!
 
 ## 🚀 Architecture
 
