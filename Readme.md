@@ -4,6 +4,11 @@ Neuron is an AI-powered triage system that automates the categorization and prio
 
 This project was built for the **NeuronERP** take-home assessment.
 
+## 📋 Documentation
+
+- [Problem Statement](docs/ProblemStatement.md): Detailed background and requirements for the project.
+- [Product Design](docs/ProductDesign.md): UI mockups, user journeys, and feature breakdown.
+
 ## 🚀 Architecture
 
 ![High Level Architecture](docs/assets/Architecture.png)
